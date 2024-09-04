@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Data Entry</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Business Data Entry</h1>
+        <nav>
+            <ul>
+                <li><a href="#info">Info</a></li>
+                <li><a href="#privacy">Privacy</a></li>
+                <li><a href="#ceo-details">CEO Details</a></li>
+                <li><a href="#data-entry">Data Entry</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="data-entry">
+            <h2>Data Entry Table</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Item</th>
+                        <th>Borrowing</th>
+                        <th>Real Money</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="text" placeholder="Enter Name"></td>
+                        <td><input type="text" placeholder="Enter Item"></td>
+                        <td><input type="number" placeholder="Enter Borrowing Amount"></td>
+                        <td><input type="number" placeholder="Enter Real Money Amount"></td>
+                    </tr>
+                    <!-- Additional rows can be added here -->
+                </tbody>
+            </table>
+            <button onclick="saveData()">Save Data</button>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

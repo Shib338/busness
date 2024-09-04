@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Data Entry</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <h1>Business Data Entry</h1>
+        <form onSubmit={handleSubmit}>
+            <input type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} required />
+            <input type="text" placeholder="Item" value={item} onChange={(e) => setItem(e.target.value)} required />
+            <input type="number" placeholder="Udhari" value={udhari} onChange={(e) => setUdhari(e.target.value)} required />
+            <input type="number" placeholder="Real Money" value={realMoney} onChange={(e) => setRealMoney(e.target.value)} required />
+            <button type="submit">Add Entry</button>
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Item</th>
+                    <th>Udhari</th>
+                    <th>Real Money</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {data.map((entry, index) => (
+                    <tr key={index}>
+                        <td>{entry.name}</td>
+                        <td>{entry.item}</td>
+                        <td>{entry.udhari}</td>
+                        <td>{entry.realMoney}</td>
+                        <td><button onClick={() => handleDelete(index)}>Delete</button></td>
+                    </tr>
+                ))}
+            </tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
